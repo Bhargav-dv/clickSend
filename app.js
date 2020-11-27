@@ -31,10 +31,10 @@ app.get("/", (req,res)=>{
 //Post 
 app.post("/", (req, res)=>{
     const number = req.body.num;
-    const message = req.body.text;
+    // const message = req.body.text;
     smsMessage.source = "sdk";
     smsMessage.to = number;
-    smsMessage.body = message;  
+    smsMessage.body = "Welcome to Schabu \n please click on the link below to continue with the interview process \n 'Working on It'";  
 
     var smsCollection = new api.SmsMessageCollection();
     smsCollection.messages = [smsMessage];
